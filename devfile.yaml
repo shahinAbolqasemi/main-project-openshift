@@ -2,7 +2,7 @@ schemaVersion: 2.2.0
 metadata:
   name: test-project
 components:
-  - name: mongodb-sample
+  - name: mongodb-build
     image:
       imageName: mongodb-sample:latest
       dockerfile:
@@ -14,3 +14,14 @@ components:
           remotes:
             "origin": "https://github.com/shahinAbolqasemi/mongodb.git"
         buildContext: .
+commands:
+  - id: build-image
+    apply:
+      component: mongodb-build
+  - id: deploy
+    composite:
+      commands:
+        - build-image
+      group:
+        kind: deploy
+        isDefault: true
