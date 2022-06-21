@@ -13,5 +13,4 @@ components:
             remote: "origin"
           remotes:
             "origin": "https://github.com/shahinAbolqasemi/mongodb.git"
-        rootRequired: false
         buildContext: .
