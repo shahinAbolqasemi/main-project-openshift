@@ -7,7 +7,7 @@ components:
       imageName: mongodb-sample:latest
       dockerfile:
         git:
-          fileLocation: "https://github.com/shahinAbolqasemi/mongodb.git/Dockerfile"
+          fileLocation: "uri/Dockerfile"
           checkoutFrom:
             revision: "master"
             remote: "origin"
