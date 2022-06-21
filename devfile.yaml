@@ -1,0 +1,17 @@
+schemaVersion: 2.2.0
+metadata:
+  name: test-project
+components:
+  - name: mongodb-sample
+    image:
+      imageName: mongodb-sample:latest
+      dockerfile:
+        git:
+          fileLocation: "uri/Dockerfile"
+          checkoutFrom:
+            revision: "master"
+            remote: "origin"
+          remotes:
+            "origin": "https://github.com/shahinAbolqasemi/mongodb.git"
+        rootRequired: false
+        buildContext: .
