@@ -13,13 +13,15 @@ components:
   - name: mongodb-build
     image:
       imageName: mongodb-sample:latest
+      autoBuild: true
       dockerfile:
-        git:
-          checkoutFrom:
-            revision: "master"
-            remote: "origin"
-          remotes:
-            "origin": "https://github.com/shahinAbolqasemi/mongodb.git"
+        uri: mongodb/Dockerfile
+        # git:
+        #   checkoutFrom:
+        #     revision: "master"
+        #     remote: "origin"
+        #   remotes:
+        #     "origin": "https://github.com/shahinAbolqasemi/mongodb.git"
         buildContext: .
 commands:
   - id: build-image
