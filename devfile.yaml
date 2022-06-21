@@ -13,7 +13,6 @@ components:
   - name: mongodb-build
     image:
       imageName: mongodb-sample:latest
-      autoBuild: true
       dockerfile:
         uri: mongodb/Dockerfile
         # git:
