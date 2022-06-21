@@ -14,9 +14,7 @@ components:
     image:
       imageName: mongodb-sample:latest
       dockerfile:
-        uri: mongodb/Dockerfile
         git:
-          fileLocation: "mongodb/Dockerfile"
           checkoutFrom:
             revision: "master"
             remote: "origin"
