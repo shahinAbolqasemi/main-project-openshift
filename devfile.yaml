@@ -2,20 +2,20 @@ schemaVersion: 2.2.0
 metadata:
   name: test-project
   version: 1.0.0
-# projects:
-#   - name: mongodb
-#     git:
-#       remotes:
-#         origin: "https://github.com/shahinAbolqasemi/mongodb.git"
-#       checkoutFrom:
-#         revision: master
+projects:
+  - name: mongodb
+    git:
+      remotes:
+        origin: "https://github.com/shahinAbolqasemi/mongodb.git"
+      checkoutFrom:
+        revision: master
 components:
   - name: mongodb-build
     image:
       imageName: mongodb-sample:latest
       dockerfile:
         git:
-          fileLocation: "/mongodb/Dockerfile"
+          fileLocation: "mongodb/Dockerfile"
           checkoutFrom:
             revision: "master"
             remote: "origin"
