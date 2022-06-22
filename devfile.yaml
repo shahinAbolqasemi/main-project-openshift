@@ -2,22 +2,22 @@ schemaVersion: 2.2.0
 metadata:
   name: test-project
   version: 1.0.0
-  attributes:
-    alpha.dockerimage-port: 8081
-projects:
-  - name: mongodb
-    git:
-      remotes:
-        origin: "https://github.com/shahinAbolqasemi/mongodb.git"
-      checkoutFrom:
-        revision: master
+  # attributes:
+  #   alpha.dockerimage-port: 8081
+# projects:
+#   - name: mongodb
+#     git:
+#       remotes:
+#         origin: "https://github.com/shahinAbolqasemi/mongodb.git"
+#       checkoutFrom:
+#         revision: master
 components:
   - name: mongodb-build
     image:
       imageName: mongodb-sample:latest
       dockerfile:
         git:
-          fileLocation: "https://github.com/shahinAbolqasemi/mongodb/blob/master/Dockerfile"
+          fileLocation: "Dockerfile"
           checkoutFrom:
             revision: "master"
             remote: "origin"
